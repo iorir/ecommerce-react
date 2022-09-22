@@ -32,7 +32,8 @@ function Categories(): JSX.Element {
     categories();
   }, []);
   return (
-    <div className="mt-5 ">
+    <div className="">
+    <div className="mt-5 text-center lg:text-left ">
       <h1 className="text-2xl">Categories</h1>
       <ul className="ml-3 mt-1">
         {topCategories &&
@@ -56,6 +57,7 @@ function Categories(): JSX.Element {
             );
           })}
       </ul>
+    </div>
     </div>
   );
 }
