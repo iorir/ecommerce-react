@@ -4,7 +4,7 @@ function Profile() {
   //check login status
 
   return (
-    <div>
+    <div className="flex justify-center mt-3 md:mt-0">
       <div className="hidden">
         <button className="bg-slate-500 rounded-sm p-1 ml-2">Login</button>
         <button className="bg-slate-500 rounded-sm p-1 ml-2">Sign Up</button>

@@ -3,7 +3,7 @@ import Profile from "../Profile";
 import { Link } from "react-router-dom";
 function Navbar() {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between flex-col md:flex-row">
       <div className="flex items-center ">
         <Link to={"/"}>
           <span className="material-symbols-outlined mr-4 p-2 rounded-sm">

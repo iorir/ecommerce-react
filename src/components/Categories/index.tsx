@@ -8,7 +8,7 @@ function Categories(): JSX.Element {
   const categories = () => {
     axios
       .get(
-        `https://www.jsonbulut.com/json/companyCategory.php?ref=${process.env.REACT_APP_CATEGORIES_API_KEY}`
+        `https://www.jsonbulut.com/json/companyCategory.php?ref=${process.env.REACT_APP_API_KEY}`
       )
       .then((res: any) => {
         const top = res.data.Kategoriler[0].Categories.filter(

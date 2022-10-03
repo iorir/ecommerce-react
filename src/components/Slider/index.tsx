@@ -6,7 +6,7 @@ function Slider() {
   const getGallery = async () => {
     await axios
       .get(
-        `https://www.jsonbulut.com/json/gallery.php?ref=${process.env.REACT_APP_GALLERY_API_KEY}`
+        `https://www.jsonbulut.com/json/gallery.php?ref=${process.env.REACT_APP_API_KEY}`
       )
       .then((res: any) => {
         setGallery(res.data.Galleries[0].Gallery[132][0]);
@@ -26,13 +26,13 @@ function Slider() {
   useEffect(() => {
     getGallery();
   }, []);
-  console.log(gallery);
-  console.log(currentIndex);
+
   return (
     gallery && (
-      <div className="w-full select-none col-span-5 relative mt-8 ">
+      <div className="w-full select-none col-span-5 relative mt-8 ml-3">
         <div>
           <img
+            className="aspect-video slider"
             src={`https://www.jsonbulut.com/admin/upload/${gallery[currentIndex].url}`}
             alt=""
           />
