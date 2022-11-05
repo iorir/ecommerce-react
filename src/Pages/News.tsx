@@ -1,9 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import NewsComp from "../components/NewsComp"
 function News() {
   return (
-    <div>News</div>
-  )
+    <div>
+      <NewsComp/>
+    </div>
+  );
 }
 
-export default News
+export default News;

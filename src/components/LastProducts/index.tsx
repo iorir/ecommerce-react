@@ -16,14 +16,13 @@ const LastProducts = () => {
     lastAdded();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log(lProducts);
 
   return (
-    <div className="mt-14">
+    <div className="mt-14 content-center">
       <div className="">
         <h2 className="text-center text-2xl ">Last Added Products</h2>
       </div>
-      <div className="mt-8 px-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-12 justify-items-center gap-y-10 text-center">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-12 justify-items-center gap-y-10 text-center">
         {lProducts?.map((item) => {
           return (
             <Card
@@ -32,7 +31,6 @@ const LastProducts = () => {
               desc={item.description}
               img={item.images[0].normal}
               price={item.price}
-              className="h-full border flex flex-col border-gray-500 rounded p-5 max-w-xs"
             />
           );
         })}

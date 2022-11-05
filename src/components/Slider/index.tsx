@@ -23,6 +23,7 @@ function Slider() {
       ? setCurrentIndex(currentIndex - 1)
       : setCurrentIndex(gallery.length - 1);
   };
+
   useEffect(() => {
     getGallery();
   }, []);
