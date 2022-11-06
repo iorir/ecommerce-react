@@ -5,7 +5,7 @@ import Contact from "./Pages/Contact";
 import Layout from "./components/Layout";
 import News from "./Pages/News";
 import Profile from "./Pages/Profile";
-import Products from "./Pages/Products";
+import Basket from "./Pages/Basket";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route path="/Contact" element={< Contact/>} />
           <Route path="/News" element={< News/>} />
           <Route path="/Profile" element={< Profile/>} />
-          <Route path="/Products" element={< Products/>} />
+          <Route path="/Basket" element={< Basket/>} />
         </Route>
       </Routes>
     </div>

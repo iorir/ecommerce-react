@@ -16,8 +16,8 @@ function Navbar() {
         <Link to={"/News"}>
           <span className="hover:bg-orange-600 p-2 rounded-sm">News</span>
         </Link>
-        <Link to={"/Products"}>
-          <span className="hover:bg-orange-600 p-2 rounded-sm">Products</span>
+        <Link to={"/Basket"}>
+          <span className="hover:bg-orange-600 p-2 rounded-sm">Basket</span>
         </Link>
         <Link to={"/Contact"}>
           <span className="hover:bg-orange-600 p-2 rounded-sm">Contact</span>
