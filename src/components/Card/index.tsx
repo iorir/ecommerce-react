@@ -13,11 +13,11 @@ function Card({ ldesc, desc, title, price, className, img, ...props }: ICard) {
   const [showModal, setShowModal] = useState(false);
   return (
     <div className="h-full border-2  flex flex-col border-orange-600  bg-slate-600 rounded p-5 max-w-xs">
-      <div className="mb-3">
+      <div className="mb-3 h-10">
         <h2>{title}</h2>
       </div>
-      <div>
-        <img className="mx-auto rounded" src={img} alt="" />
+      <div className="mx-auto">
+        <img className="rounded h-48" src={img} alt=""/>
       </div>
       <div className="truncate mt-3 mb-3">{desc}</div>
       {price && <div>{price}$</div>}

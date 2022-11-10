@@ -6,6 +6,7 @@ import Layout from "./components/Layout";
 import News from "./Pages/News";
 import Profile from "./Pages/Profile";
 import Basket from "./Pages/Basket";
+import LogReg from "./Pages/LogReg";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
           <Route path="/News" element={< News/>} />
           <Route path="/Profile" element={< Profile/>} />
           <Route path="/Basket" element={< Basket/>} />
+          <Route path="/LogReg" element={< LogReg/>} />
+          
         </Route>
       </Routes>
     </div>
