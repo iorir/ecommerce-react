@@ -5,6 +5,7 @@ import SubCategories from "../SubCategories";
 function Categories(): JSX.Element {
   const [catItems, setCatItems] = useState<any>();
   const [topCategories, setTopCategories] = useState<any>();
+  
   const categories = () => {
     axios
       .get(
@@ -33,31 +34,31 @@ function Categories(): JSX.Element {
   }, []);
   return (
     <div className="">
-    <div className="mt-5 text-center lg:text-left ">
-      <h1 className="text-2xl">Categories</h1>
-      <ul className="ml-3 mt-1">
-        {topCategories &&
-          topCategories.map((topItem: any) => {
-            let subItems = catItems.filter(
-              (item: any) => item.TopCatogryId === topItem.CatogryId
-            );
-            return (
-              <div key={topItem.CatogryId}>
-                <li
-                  className="hover:cursor-pointer"
-                  onClick={() => toggleCategories(topItem.CatogryId)}
-                  key={topItem.CatogryId}
-                >
-                  {topItem.CatogryName}
-                </li>
-                {subItems.map((item: any) => (
-                  <SubCategories key={item.CatogryId} item={item} />
-                ))}
-              </div>
-            );
-          })}
-      </ul>
-    </div>
+      <div className="mt-5 text-center lg:text-left ">
+        <h1 className="text-2xl">Categories</h1>
+        <ul className="ml-3 mt-1">
+          {topCategories &&
+            topCategories.map((topItem: any) => {
+              let subItems = catItems.filter(
+                (item: any) => item.TopCatogryId === topItem.CatogryId
+              );
+              return (
+                <div key={topItem.CatogryId}>
+                  <li
+                    className="hover:cursor-pointer"
+                    onClick={() => toggleCategories(topItem.CatogryId)}
+                    key={topItem.CatogryId}
+                  >
+                    {topItem.CatogryName}
+                  </li>
+                  {subItems.map((item: any) => (
+                    <SubCategories key={item.CatogryId} item={item} />
+                  ))}
+                </div>
+              );
+            })}
+        </ul>
+      </div>
     </div>
   );
 }

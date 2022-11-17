@@ -7,6 +7,7 @@ import News from "./Pages/News";
 import Profile from "./Pages/Profile";
 import Basket from "./Pages/Basket";
 import LogReg from "./Pages/LogReg";
+import CategoryFilter from "./Pages/CategoryFilter";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Profile" element={< Profile/>} />
           <Route path="/Basket" element={< Basket/>} />
           <Route path="/LogReg" element={< LogReg/>} />
+          <Route path="/CategoryFilter" element={< CategoryFilter/>} />
           
         </Route>
       </Routes>

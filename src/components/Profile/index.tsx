@@ -4,7 +4,6 @@ interface IProps {
   log: any[];
 }
 function Profile({ handleLogout, log }: IProps) {
-  console.log(log);
   return (
     <div className="flex justify-center mt-3 md:mt-0">
       {(log.length < 1 || !log) && (

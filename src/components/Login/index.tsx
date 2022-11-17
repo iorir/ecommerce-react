@@ -55,10 +55,10 @@ function Login({ changePage }: IChange) {
     getLogin();
   };
   return (
-    <div>
+    <div className="md:ml-0 -ml-12">
       <div className="flex mt-40 flex-col">
         <div className=" justify-center mr-56 flex">
-          <button className=" bg-orange-600 text-lg px-3 py-1 rounded-t-2xl mr-2 ml-4">
+          <button className=" bg-orange-600 text-lg px-3 py-1 rounded-t-2xl mr-2 ml-32 md:ml-7">
             Login
           </button>
           <button
