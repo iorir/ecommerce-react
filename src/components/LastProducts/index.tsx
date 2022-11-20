@@ -16,6 +16,7 @@ const LastProducts = () => {
     lastAdded();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  console.log(lProducts);
 
   return (
     <div className="mt-14 content-center">
@@ -31,6 +32,7 @@ const LastProducts = () => {
               desc={item.description}
               img={item.images[0].normal}
               price={item.price}
+              itemId={item.productId}
             />
           );
         })}

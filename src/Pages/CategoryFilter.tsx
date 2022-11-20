@@ -17,25 +17,29 @@ function CategoryFilter() {
     getItems();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
+  console.log(data);
 
   return (
     <div>
-      {!data && (
-        <div className="text-center mt-32">THERE IS NO ITEM IN THIS CATEGORY</div>
+      {!data ? (
+        <div className="text-center mt-32">
+          THERE IS NO ITEM IN THIS CATEGORY
+        </div>
+      ) : (
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-12 justify-items-center gap-y-10 text-center">
+          {data?.map((item) => {
+            return (
+              <Card
+                key={item.productId}
+                title={item.productName}
+                desc={item.description}
+                img={item.images[0].normal}
+                price={item.price}
+              />
+            );
+          })}
+        </div>
       )}
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-12 justify-items-center gap-y-10 text-center">
-        {data?.map((item) => {
-          return (
-            <Card
-              key={item.productId}
-              title={item.productName}
-              desc={item.description}
-              img={item.images[0].normal}
-              price={item.price}
-            />
-          );
-        })}
-      </div>
     </div>
   );
 }

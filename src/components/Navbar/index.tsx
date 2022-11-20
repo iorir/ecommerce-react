@@ -30,8 +30,8 @@ function Navbar() {
         <Link to={"/News"}>
           <span className="hover:bg-orange-600 p-2 rounded-sm">News</span>
         </Link>
-        <Link to={"/Basket"}>
-          <span className="hover:bg-orange-600 p-2 rounded-sm">Basket</span>
+        <Link to={"/Cart"}>
+          <span className="hover:bg-orange-600 p-2 rounded-sm">Cart</span>
         </Link>
         <Link to={"/Contact"}>
           <span className="hover:bg-orange-600 p-2 rounded-sm">Contact</span>
