@@ -21,17 +21,16 @@ function Register({ changePage }: IChange) {
       .then((res) => alert(res.data.user[0].mesaj));
   };
   return (
-    <div>
+    <div className="md:ml-0 -ml-12">
       <div className="flex mt-40 flex-col">
         <div className=" justify-center mr-56 flex">
           <button
             onClick={() => changePage()}
-            className="bg-slate-500 px-3 py-1 rounded-t-2xl ml-3 mr-2"
+            className=" bg-slate-500 px-3 py-1 rounded-t-2xl mr-2 ml-32 md:ml-7"
           >
             Login
           </button>
           <button
-            onClick={() => changePage()}
             className="text-lg bg-orange-600 px-3 py-1 rounded-t-2xl"
           >
             Register
