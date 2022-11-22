@@ -11,13 +11,10 @@ const LastProducts = () => {
       )
       .then((res) => setLProducts(res.data.Products[0].bilgiler));
   };
-
   useEffect(() => {
     lastAdded();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log(lProducts);
-
   return (
     <div className="mt-14 content-center">
       <div className="">

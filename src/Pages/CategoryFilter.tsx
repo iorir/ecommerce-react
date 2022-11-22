@@ -17,7 +17,6 @@ function CategoryFilter() {
     getItems();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
-  console.log(data);
 
   return (
     <div>

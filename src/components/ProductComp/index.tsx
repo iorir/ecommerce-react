@@ -5,17 +5,15 @@ function ProductComp() {
   let array: any = [];
   const handleBuy = () => {
     if (localStorage.getItem("userInfo")) {
-      return null;
+      return handleAddCart();
     } else if (sessionStorage.getItem("userInfo")) {
-      return null;
+      return handleAddCart();
     } else {
       navigate("/LogReg");
     }
   };
-  console.log(location.state);
 
   const handleAddCart = async () => {
-    await handleBuy();
     array = [];
     let getLocal = await localStorage.getItem("cart");
     let cartInf: any[] = [];
@@ -61,7 +59,7 @@ function ProductComp() {
           <div className="flex flex-grow items-end justify-evenly">
             <button
               className="py-3 px-8 bg-orange-600 border-2 rounded-lg border-slate-500"
-              onClick={() => handleAddCart()}
+              onClick={() => handleBuy()}
             >
               Add to cart
             </button>
