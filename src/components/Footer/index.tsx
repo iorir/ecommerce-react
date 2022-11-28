@@ -8,9 +8,6 @@ function index() {
           <Link to={"/"}>
             <li className="hover:bg-orange-600 p-1 rounded ">Homepage</li>
           </Link>
-          <Link to={"/Products"}>
-            <li className="hover:bg-orange-600 p-1 rounded ">Products</li>
-          </Link>
           <Link to={"/News"}>
             <li className="hover:bg-orange-600 p-1 rounded ">News</li>
           </Link>

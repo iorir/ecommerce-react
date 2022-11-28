@@ -1,5 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import useUserInfo from "../../hooks/useUserInfo";
 function ProductComp() {
+  const { userInfo } = useUserInfo();
   const location: any = useLocation();
   const navigate = useNavigate();
   let array: any = [];
@@ -16,15 +18,16 @@ function ProductComp() {
   const handleAddCart = async () => {
     array = [];
     let getLocal = await localStorage.getItem("cart");
-    let cartInf: any[] = [];
-    if (getLocal !== null) {
+    let cartInf: any[] = [{}];
+    if (getLocal) {
       cartInf = JSON.parse(getLocal);
     }
     cartInf &&
       cartInf.map((item: any) => {
-        return array.push(item);
+        return Object.keys(item).length > 0 && array.push(item);
       });
     await array.push({
+      userId: userInfo?.userId,
       itemId: location.state.itemId,
       desc: location.state.desc,
       title: location.state.title,

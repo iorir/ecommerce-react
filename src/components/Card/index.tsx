@@ -11,6 +11,13 @@ interface ICard {
   ldesc?: string;
   itemId?: string;
 }
+interface IUserInfo {
+  userEmail: string;
+  userId: string;
+  userName: string;
+  userPass: string;
+  userSurname: string;
+}
 function Card({
   ldesc,
   desc,
