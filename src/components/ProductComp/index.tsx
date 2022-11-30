@@ -1,6 +1,8 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import {useId } from "react";
 import useUserInfo from "../../hooks/useUserInfo";
 function ProductComp() {
+  const idGen = useId();
   const { userInfo } = useUserInfo();
   const location: any = useLocation();
   const navigate = useNavigate();
@@ -33,6 +35,7 @@ function ProductComp() {
       title: location.state.title,
       img: location.state.img,
       price: location.state.price,
+      orderId: idGen,
     });
     await localStorage.removeItem("cart");
     localStorage.setItem("cart", JSON.stringify(array));

@@ -1,19 +1,21 @@
 import React from "react";
 import Cart from "../../Pages/Cart";
 interface ICartItem {
-  desc: "";
-  img: "";
-  itemId: "";
-  title: "";
-  price: "";
+  desc: string;
+  img: string;
+  itemId: string;
+  title: string;
+  price: string;
+  orderId: string;
+  handleClick: (orderId:string) =>void; 
 }
-function CartItem({ desc, img, itemId, title, price }: ICartItem) {
-  const handleClick = () => {};
+function CartItem({ desc, img, itemId, title, price,handleClick,orderId }: ICartItem) {
+  
   return (
     <div className="mt-10 bg-slate-600 p-10 rounded-xl">
       <div className="flex justify-end ">
         <span
-          onClick={() => handleClick()}
+          onClick={() => handleClick(orderId)}
           className="hover:bg-orange-600 px-2  rounded-full text-lg hover:cursor-pointer"
         >
           X
