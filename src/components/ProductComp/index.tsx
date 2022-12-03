@@ -19,7 +19,7 @@ function ProductComp() {
 
   const handleAddCart = async () => {
     array = [];
-    let getLocal = await localStorage.getItem("cart");
+    let getLocal = localStorage.getItem("cart");
     let cartInf: any[] = [{}];
     if (getLocal) {
       cartInf = JSON.parse(getLocal);
