@@ -22,21 +22,21 @@ function CartItem({
       <div className="flex justify-end ">
         <span
           onClick={() => handleClick(orderId)}
-          className="hover:bg-orange-600 px-2  rounded-full text-lg hover:cursor-pointer"
+          className="hover:bg-orange-600 px-2 rounded-full text-lg hover:cursor-pointer"
         >
           X
         </span>
       </div>
-      <div className="grid grid-cols-12 text-center place-items-center ">
-        <div className="col-span-2 ">
+      <div className=" lg:grid lg:grid-cols-12 text-center place-items-center">
+        <div className="col-span-12 lg:col-span-2 justify-center flex ">
           <img src={img} className="rounded-lg" alt="" />
         </div>
-        <div className="mx-5 col-span-2 bg-orange-600 rounded-lg px-2 py-1">
-          {title}
+        <div className="m-5 col-span-2 bg-orange-600 rounded-lg px-2 py-1">
+          <span>{title}</span>
         </div>
         <div className="col-span-7 text-start">{desc}</div>
-        <div className="col-span-1  justify-end  bg-orange-600 px-2 py-1 rounded">
-          {price}$
+        <div className="col-span-1 lg:m-0 my-6 justify-end">
+          <span className="bg-orange-600 px-2 py-1 rounded">{price}$</span>
         </div>
       </div>
     </div>

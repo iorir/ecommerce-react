@@ -18,7 +18,7 @@ function Cart() {
     localStorage.setItem("cart", JSON.stringify(a));
   };
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full grid justify-center ">
       {cart.length ? (
         cart
           .filter((i: any) => i.userId === userInfo?.userId)
