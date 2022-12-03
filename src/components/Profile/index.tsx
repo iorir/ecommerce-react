@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 interface IProps {
   handleLogout: any;
-  log: any[];
+  log: any;
 }
 function Profile({ handleLogout, log }: IProps) {
   return (
@@ -24,7 +24,7 @@ function Profile({ handleLogout, log }: IProps) {
               src="https://picsum.photos/50"
               alt=""
             />
-            recaizademahmutekrem
+            {log.userName}
           </button>
 
           <div className="bg-orange-600 absolute invisible group-focus-within:visible rounded  mt-2 ">

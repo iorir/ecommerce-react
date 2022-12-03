@@ -1,5 +1,4 @@
 import React from "react";
-import Cart from "../../Pages/Cart";
 interface ICartItem {
   desc: string;
   img: string;
@@ -7,10 +6,17 @@ interface ICartItem {
   title: string;
   price: string;
   orderId: string;
-  handleClick: (orderId:string) =>void; 
+  handleClick: (orderId: string) => void;
 }
-function CartItem({ desc, img, itemId, title, price,handleClick,orderId }: ICartItem) {
-  
+function CartItem({
+  desc,
+  img,
+  itemId,
+  title,
+  price,
+  handleClick,
+  orderId,
+}: ICartItem) {
   return (
     <div className="mt-10 bg-slate-600 p-10 rounded-xl">
       <div className="flex justify-end ">

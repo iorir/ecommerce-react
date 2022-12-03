@@ -32,7 +32,6 @@ function Login({ changePage }: IChange) {
       .then((res) => {
         if (res.data.user[0].durum) {
           alert(res.data.user[0].mesaj);
-          navigate("/");
           userInfo = {
             userEmail: res.data.user[0].bilgiler.userEmail,
             userPass: btoa(res.data.user[0].bilgiler.userPass),
@@ -47,6 +46,9 @@ function Login({ changePage }: IChange) {
             localStorage.removeItem("userInfo");
             sessionStorage.setItem("userInfo", JSON.stringify(userInfo));
           }
+          navigate("/");
+        } else {
+          alert("Mail or password is incorrect");
         }
       });
   };

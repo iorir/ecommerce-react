@@ -10,12 +10,12 @@ function Navbar() {
   } else if (sesLogInf !== null) {
     log = JSON.parse(sesLogInf);
   }
-  function handleLogout() {
+  const handleLogout = () => {
     localStorage.removeItem("userInfo");
     sessionStorage.removeItem("userInfo");
     log = [];
     navigate("/");
-  }
+  };
   return (
     <div className="flex justify-between flex-col md:flex-row z-50">
       <div className="flex items-center ">
