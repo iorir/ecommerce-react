@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 function index() {
   return (
-    <div className="grid grid-cols-3 mt-5 p-5 px-20 rounded justify-between bg-slate-500">
-      <div className="flex">
+    <div className="grid text-center md:text-left  md:grid-cols-3 mt-5 p-5 px-20 rounded bg-slate-500">
+      <div className="">
         <ul>
           <Link to={"/"}>
             <li className="hover:bg-orange-600 p-1 rounded ">Homepage</li>
@@ -16,7 +16,7 @@ function index() {
           </Link>
         </ul>
       </div>
-      <div className="flex">
+      <div className="">
         <ul>
           <Link to={"/"}>
             <li className="hover:bg-orange-600 p-1 rounded ">Lorem</li>
