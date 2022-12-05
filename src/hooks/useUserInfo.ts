@@ -5,6 +5,7 @@ interface IUserInfo {
   userName?: string;
   userPass?: string;
   userSurname?: string;
+  userPhone?: string;
 }
 const useUserInfo = () => {
   const [userInfo, setUserInfo] = useState<IUserInfo>();

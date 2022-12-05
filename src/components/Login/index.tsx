@@ -10,6 +10,7 @@ interface IUserinfo {
   userName: string;
   userSurname: string;
   userId: string;
+  userPhone: string;
 }
 function Login({ changePage }: IChange) {
   const [email, setEmail] = useState("");
@@ -21,6 +22,7 @@ function Login({ changePage }: IChange) {
     userName: "",
     userSurname: "",
     userId: "",
+    userPhone: "",
   };
   const navigate = useNavigate();
 
@@ -34,10 +36,11 @@ function Login({ changePage }: IChange) {
           alert(res.data.user[0].mesaj);
           userInfo = {
             userEmail: res.data.user[0].bilgiler.userEmail,
-            userPass: btoa(res.data.user[0].bilgiler.userPass),
+            userPass: btoa(password),
             userName: res.data.user[0].bilgiler.userName,
             userSurname: res.data.user[0].bilgiler.userSurname,
             userId: res.data.user[0].bilgiler.userId,
+            userPhone: res.data.user[0].bilgiler.userPhone,
           };
           if (remember) {
             sessionStorage.removeItem("userInfo");

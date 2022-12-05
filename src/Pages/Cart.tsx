@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import CartItem from "../components/CartItem";
 import useUserInfo from "../hooks/useUserInfo";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
+  const navigate = useNavigate();
   const [cart, setCart] = useState<any>([]);
   const [response, setResponse] = useState<boolean>();
   const { userInfo } = useUserInfo();
@@ -38,6 +40,7 @@ function Cart() {
       .filter((i: any) => i.userId !== userInfo?.userId)
       ?.map((item: any) => a.push(item));
     localStorage.setItem("cart", JSON.stringify(a));
+    navigate("/");
   };
   useEffect(() => {
     if (response) {
@@ -51,15 +54,16 @@ function Cart() {
   console.log();
   return (
     <div className="w-full grid justify-center ">
-      {cart.filter((item:any) => item.userId === userInfo?.userId).length>0 &&(
-      <div className=" justify-center flex mt-10 ">
-        <button
-          className="bg-orange-600 px-3 rounded-lg py-2"
-          onClick={(e) => handleBuy(e)}
-        >
-          Buy Everything by One Click
-        </button>
-      </div>
+      {cart.filter((item: any) => item.userId === userInfo?.userId).length >
+        0 && (
+        <div className=" justify-center flex mt-10 ">
+          <button
+            className="bg-orange-600 px-3 rounded-lg py-2"
+            onClick={(e) => handleBuy(e)}
+          >
+            Buy Everything by One Click
+          </button>
+        </div>
       )}
       {cart.length ? (
         cart
