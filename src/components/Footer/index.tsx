@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function index() {
   return (
     <div className="grid text-center md:text-left  md:grid-cols-3 mt-5 p-5 px-20 rounded bg-slate-500">
-      <div className="">
+      <div className="md:flex">
         <ul>
           <Link to={"/"}>
             <li className="hover:bg-orange-600 p-1 rounded ">Homepage</li>
@@ -16,7 +16,7 @@ function index() {
           </Link>
         </ul>
       </div>
-      <div className="">
+      <div className="md:flex">
         <ul>
           <Link to={"/"}>
             <li className="hover:bg-orange-600 p-1 rounded ">Lorem</li>
@@ -32,7 +32,7 @@ function index() {
           </Link>
         </ul>
       </div>
-      <div className=" ">
+      <div className="">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
         aliquam optio porro natus dicta expedita autem alias ipsam id eaque.
       </div>
