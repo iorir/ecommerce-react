@@ -45,8 +45,8 @@ function ChangePass() {
     } else alert("Passwords did not matched");
   };
   return (
-    <div className="flex w-full ">
-      <div className="flex flex-col items-center pt-5 [&>div>label]:font-medium [&>div>label]:text-black bg-slate-500 px-5 py-2 rounded-3xl [&>div]:w-full w-1/2 [&>div>input]:w-full [&>div>input]:rounded [&>div>input]:px-3 [&>div>input]:py-1 [&>*]:px-2 [&>*]:py-1 [&>*]:rounded [&>*]:mt-2 [&>div>input]:text-black">
+    <div className="flex w-full mb-10 lg:mb-0 h-fit">
+      <div className="flex flex-col items-center pt-5 [&>div>label]:font-medium [&>div>label]:text-black bg-slate-500 md:px-5 md:py-2 lg:mx-14 rounded-3xl [&>div]:w-full w-full [&>div>input]:w-full [&>div>input]:rounded [&>div>input]:px-3 [&>div>input]:py-1 [&>*]:px-2 [&>*]:py-1 [&>*]:rounded [&>*]:mt-2 [&>div>input]:text-black">
         <h1 className="text-black text-xl font-semibold">Change Password</h1>
         <div className="">
           <label className=""> Name:</label>

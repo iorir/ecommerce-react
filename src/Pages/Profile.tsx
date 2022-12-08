@@ -4,7 +4,7 @@ import PrevOrders from "../components/PrevOrders";
 
 function Profile() {
   return (
-    <div className="grid grid-cols-2 mt-20">
+    <div className="grid w-full grid-cols-1 lg:grid-cols-3 mt-20">
       <ChangePass />
       <PrevOrders />
     </div>
