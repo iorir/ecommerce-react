@@ -30,9 +30,7 @@ function Register({ changePage }: IChange) {
           >
             Login
           </button>
-          <button
-            className="text-lg bg-orange-600 px-3 py-1 rounded-t-2xl"
-          >
+          <button className="text-lg bg-orange-600 px-3 py-1 rounded-t-2xl">
             Register
           </button>
         </div>
@@ -43,36 +41,50 @@ function Register({ changePage }: IChange) {
         >
           <h1 className="text-2xl font-bold text-orange-600 mb-4">Register</h1>
           <input
+            required
             className="p-2 mb-4 rounded"
             value={name}
+            pattern="[A-Za-z]{2,}"
             onChange={(e) => setName(e.target.value)}
             placeholder="Name"
             type="text"
+            title="letters only and min. 2 characters"
           />
           <input
+            required
             className="p-2 mb-4 rounded"
             placeholder="Surname"
             value={surname}
             onChange={(e) => setSurname(e.target.value)}
             type="text"
+            title="letters only and min. 2 characters"
+            pattern="[A-Za-z]{2,}"
           />
           <input
+            required
             className="p-2 mb-4 rounded"
             value={phone}
+            type="tel"
+            pattern="[1-9]{1}[0-9]{9}"
+            title="number only, must be 10 characters and start without zero"
             onChange={(e) => setPhone(e.target.value)}
             placeholder="Phone"
-            type="text"
           />
           <input
             className="p-2 mb-4 rounded"
+            required
+            type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            title="enter valid email address"
             placeholder="Email"
-            type="text"
           />
           <input
+            required
             className="p-2 mb-4 rounded"
             value={password}
+            pattern=".{6,}"
+            title="password must be greater than 6 characters"
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
             type="password"
