@@ -5,9 +5,9 @@ function Slider() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const getGallery = async () => {
     await axios
-      .get(
-        `https://www.jsonbulut.com/json/gallery.php?ref=${process.env.REACT_APP_API_KEY}`
-      )
+      .get("https://www.jsonbulut.com/json/gallery.php", {
+        params: { ref: process.env.REACT_APP_API_KEY },
+      })
       .then((res: any) => {
         setGallery(res.data.Galleries[0].Gallery[132][0]);
       });

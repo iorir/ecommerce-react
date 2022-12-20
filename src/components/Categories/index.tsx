@@ -5,12 +5,14 @@ import SubCategories from "../SubCategories";
 function Categories(): JSX.Element {
   const [catItems, setCatItems] = useState<any>();
   const [topCategories, setTopCategories] = useState<any>();
-  
+
   const categories = () => {
     axios
-      .get(
-        `https://www.jsonbulut.com/json/companyCategory.php?ref=${process.env.REACT_APP_API_KEY}`
-      )
+      .get("https://www.jsonbulut.com/json/companyCategory.php", {
+        params: {
+          ref: process.env.REACT_APP_API_KEY,
+        },
+      })
       .then((res: any) => {
         const top = res.data.Kategoriler[0].Categories.filter(
           (category: any) => category.TopCatogryId === "0"

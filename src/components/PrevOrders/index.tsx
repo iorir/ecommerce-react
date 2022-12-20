@@ -20,15 +20,14 @@ function PrevOrders() {
     userInfo?.userId && getOrderList();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userInfo?.userId]);
-  console.log(data);
   return (
     <div className="flex w-full col-span-2">
       <div className="flex flex-col items-center pt-5 w-full  bg-slate-500  rounded-3xl ">
         <h1 className="text-black text-xl font-semibold mb-5">Last Orders</h1>
         <div>
-          {data.map((item) => (
+          {data ? data.map((item) => (
             <LastOrders data={item} />
-          ))}
+          )) : "There is nothing to show"}
         </div>
       </div>
     </div>

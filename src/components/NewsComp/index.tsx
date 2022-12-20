@@ -5,9 +5,14 @@ function NewsComp() {
   const [data, useData] = useState<any[]>();
   const getNews = () => {
     axios
-      .get(
-        `https://www.jsonbulut.com/json/news.php?ref=${process.env.REACT_APP_API_KEY_SEC}&start=0&count=3&order=desc`
-      )
+      .get("https://www.jsonbulut.com/json/news.php", {
+        params: {
+          ref: process.env.REACT_APP_API_KEY_SEC,
+          start: 0,
+          count: 3,
+          order: "desc",
+        },
+      })
       // eslint-disable-next-line react-hooks/rules-of-hooks
       .then((res) => useData(res.data.News[0].Haber_Bilgileri));
   };

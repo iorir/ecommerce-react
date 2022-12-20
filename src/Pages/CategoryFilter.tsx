@@ -8,9 +8,14 @@ function CategoryFilter() {
   const [data, setData] = useState<any[]>();
   const getItems = () => {
     axios
-      .get(
-        `https://www.jsonbulut.com/json/product.php?ref=${process.env.REACT_APP_API_KEY}&start=1&count=2&categoryId=${location.state.itemId}`
-      )
+      .get("https://www.jsonbulut.com/json/product.php", {
+        params: {
+          ref: process.env.REACT_APP_API_KEY,
+          start: 1,
+          count: 2,
+          categoryId: location.state.itemId,
+        },
+      })
       .then((res) => setData(res.data.Products[0].bilgiler));
   };
   useEffect(() => {

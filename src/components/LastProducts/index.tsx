@@ -6,9 +6,14 @@ const LastProducts = () => {
   const [lProducts, setLProducts] = useState<any[]>();
   const lastAdded = () => {
     axios
-      .get(
-        `https://www.jsonbulut.com/json/product.php?ref=${process.env.REACT_APP_API_KEY}&start=0&count=6&order=desc`
-      )
+      .get("https://www.jsonbulut.com/json/product.php", {
+        params: {
+          ref: process.env.REACT_APP_API_KEY,
+          start: 0,
+          count: 6,
+          order: "desc",
+        },
+      })
       .then((res) => setLProducts(res.data.Products[0].bilgiler));
   };
   useEffect(() => {

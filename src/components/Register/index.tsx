@@ -15,9 +15,16 @@ function Register({ changePage }: IChange) {
   };
   const getRegister = () => {
     axios
-      .get(
-        `https://www.jsonbulut.com/json/userRegister.php?ref=${process.env.REACT_APP_API_KEY}&userName=${name}&userSurname=${surname}&userPhone=${phone}&userMail=${email}.com&userPass=${password}`
-      )
+      .get("https://www.jsonbulut.com/json/userRegister.php", {
+        params: {
+          ref: process.env.REACT_APP_API_KEY,
+          userName: name,
+          userSurname: surname,
+          userPhone: phone,
+          userMail: email,
+          userPass: password,
+        },
+      })
       .then((res) => alert(res.data.user[0].mesaj));
   };
   return (
@@ -75,6 +82,7 @@ function Register({ changePage }: IChange) {
             required
             type="email"
             value={email}
+            pattern="/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/"
             onChange={(e) => setEmail(e.target.value)}
             title="enter valid email address"
             placeholder="Email"

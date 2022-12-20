@@ -25,12 +25,17 @@ function Login({ changePage }: IChange) {
     userPhone: "",
   };
   const navigate = useNavigate();
-
+  console.log(password);
   const getLogin = () => {
     axios
-      .get(
-        `https://www.jsonbulut.com/json/userLogin.php?ref=${process.env.REACT_APP_API_KEY}&userEmail=${email}.com&userPass=${password}&face=no`
-      )
+      .get("https://www.jsonbulut.com/json/userLogin.php", {
+        params: {
+          ref: process.env.REACT_APP_API_KEY,
+          userEmail: email,
+          userPass: password,
+          face: "no",
+        },
+      })
       .then((res) => {
         if (res.data.user[0].durum) {
           alert(res.data.user[0].mesaj);
