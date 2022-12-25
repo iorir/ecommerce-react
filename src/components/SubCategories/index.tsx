@@ -1,14 +1,5 @@
 import { useNavigate } from "react-router-dom";
-interface IItem {
-  CatogryId: String;
-  TopCatogryId: String;
-  CatogryName: String;
-}
-
-interface ISubCategories {
-  item: IItem;
-}
-
+import { ISubCategories } from "../../ts/interfaces";
 function SubCategories({ item }: ISubCategories) {
   const navigate = useNavigate();
   return (

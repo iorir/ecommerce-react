@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import useUserInfo from "../../hooks/useUserInfo";
-import LastOrders, { IData } from "../LastOrders";
+import LastOrders from "../LastOrders";
+import {IData} from "../../ts/interfaces"
 function PrevOrders() {
   const [data, setData] = useState<IData[]>([]);
   const { userInfo } = useUserInfo();

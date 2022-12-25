@@ -1,13 +1,5 @@
 import React from "react";
-interface ICartItem {
-  desc: string;
-  img: string;
-  itemId: string;
-  title: string;
-  price: string;
-  orderId: string;
-  handleClick: (orderId: string) => void;
-}
+import { ICartItem } from "../../ts/interfaces";
 function CartItem({
   desc,
   img,

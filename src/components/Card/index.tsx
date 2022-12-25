@@ -1,23 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Modal from "../Modal";
 import { useNavigate } from "react-router-dom";
+import {ICard} from "../../ts/interfaces"
 
-interface ICard {
-  desc?: string;
-  title?: string;
-  price?: string;
-  className?: string;
-  img?: string;
-  ldesc?: string;
-  itemId?: string;
-}
-interface IUserInfo {
-  userEmail: string;
-  userId: string;
-  userName: string;
-  userPass: string;
-  userSurname: string;
-}
+
 function Card({
   ldesc,
   desc,

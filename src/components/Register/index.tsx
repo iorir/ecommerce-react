@@ -1,8 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-interface IChange {
-  changePage: () => void;
-}
+import { IChange } from "../../ts/interfaces";
 function Register({ changePage }: IChange) {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");

@@ -1,17 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-interface IChange {
-  changePage: () => void;
-}
-interface IUserinfo {
-  userEmail: string;
-  userPass: string;
-  userName: string;
-  userSurname: string;
-  userId: string;
-  userPhone: string;
-}
+import {IUserinfo, IChange} from "../../ts/interfaces"
+
+
 function Login({ changePage }: IChange) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
-interface IProps {
-  handleLogout: any;
-  log: any;
-}
+import { IProps } from "../../ts/interfaces";
 function Profile({ handleLogout, log }: IProps) {
   return (
     <div className="flex justify-center mt-3 md:mt-0">

@@ -1,13 +1,5 @@
 import React from "react";
-interface IModal {
-  desc?: any;
-  title?: string;
-  className?: string;
-  img?: string;
-  ldesc?: string;
-  showModal?: boolean;
-  setShowModal?: React.Dispatch<React.SetStateAction<boolean>>;
-}
+import { IModal } from "../../ts/interfaces";
 function Modal({
   ldesc,
   desc,
